@@ -1,0 +1,19 @@
+#!/usr/bin/with-contenv bash
+
+PUID=${PUID:-1099}
+PGID=${PGID:-1099}
+
+groupadd \
+    --gid "$PGID" \
+    airvideohd
+
+useradd \
+    --home-dir "/data" \
+    --gid airvideohd \
+    --no-create-home \
+    --uid "$PUID" \
+    --shell "/usr/sbin/nologin" \
+    airvideohd
+
+echo "User airvideohd(uid:$(id -u airvideohd), gid:$(id -g airvideohd))"
+

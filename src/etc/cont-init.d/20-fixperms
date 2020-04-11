@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+chown -R airvideohd:airvideohd /data
+chown -R airvideohd:airvideohd /transcode
+chown -R airvideohd:airvideohd /opt/airvideohd
+chown -R airvideohd:airvideohd /etc/airvideohd

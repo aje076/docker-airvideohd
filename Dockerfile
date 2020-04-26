@@ -7,6 +7,7 @@ ARG AIRVIDEOHD_VERSION="2.2.3"
 
 RUN apt-get update && \
     apt-get -y install \
+        tzdata \
         vlc \
         bzip2 \
         libavcodec-extra && \
